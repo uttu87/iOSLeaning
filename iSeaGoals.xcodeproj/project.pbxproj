@@ -15,6 +15,8 @@
 		361F6BF82255FF45009A4109 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BF72255FF45009A4109 /* MainViewController.swift */; };
 		361F6BFA22560DB2009A4109 /* MatchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BF922560DB2009A4109 /* MatchCollectionCell.swift */; };
 		361F6BFD22561482009A4109 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BFC22561482009A4109 /* Match.swift */; };
+		361F6C00225615BD009A4109 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BFF225615BD009A4109 /* DataManager.swift */; };
+		361F6C0222561625009A4109 /* iSeaGoals-Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6C0122561625009A4109 /* iSeaGoals-Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		361F6BF72255FF45009A4109 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		361F6BF922560DB2009A4109 /* MatchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCollectionCell.swift; sourceTree = "<group>"; };
 		361F6BFC22561482009A4109 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		361F6BFF225615BD009A4109 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		361F6C0122561625009A4109 /* iSeaGoals-Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iSeaGoals-Settings.swift"; sourceTree = "<group>"; };
+		361F6C0422561691009A4109 /* match_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = match_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,8 @@
 		361F6BC82255BF09009A4109 /* iSeaGoals */ = {
 			isa = PBXGroup;
 			children = (
+				361F6C0322561649009A4109 /* Data */,
+				361F6BFE2256159D009A4109 /* Networking */,
 				361F6BFB22561473009A4109 /* Models */,
 				361F6BC92255BF09009A4109 /* AppDelegate.swift */,
 				361F6BF72255FF45009A4109 /* MainViewController.swift */,
@@ -106,6 +113,7 @@
 				361F6BD02255BF0B009A4109 /* Assets.xcassets */,
 				361F6BD22255BF0B009A4109 /* LaunchScreen.storyboard */,
 				361F6BD52255BF0B009A4109 /* Info.plist */,
+				361F6C0122561625009A4109 /* iSeaGoals-Settings.swift */,
 			);
 			path = iSeaGoals;
 			sourceTree = "<group>";
@@ -134,6 +142,22 @@
 				361F6BFC22561482009A4109 /* Match.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		361F6BFE2256159D009A4109 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				361F6BFF225615BD009A4109 /* DataManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		361F6C0322561649009A4109 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				361F6C0422561691009A4109 /* match_data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				361F6BCA2255BF09009A4109 /* AppDelegate.swift in Sources */,
+				361F6C0222561625009A4109 /* iSeaGoals-Settings.swift in Sources */,
+				361F6C00225615BD009A4109 /* DataManager.swift in Sources */,
 				361F6BFA22560DB2009A4109 /* MatchCollectionCell.swift in Sources */,
 				361F6BF82255FF45009A4109 /* MainViewController.swift in Sources */,
 				361F6BFD22561482009A4109 /* Match.swift in Sources */,
