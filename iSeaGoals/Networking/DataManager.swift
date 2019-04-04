@@ -23,7 +23,7 @@ struct DataManager {
                 }
             } else {
                 guard let matchDataURL = URL(string: matchDataURL) else {
-                    if kDebugLog { print("stationDataURL not a valid URL") }
+                    if kDebugLog { print("matchDataURL not a valid URL") }
                     success(nil)
                     return
                 }

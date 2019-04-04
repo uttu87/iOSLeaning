@@ -11,5 +11,5 @@ import Foundation
 // Display Comments
 let kDebugLog = true
 
-let useLocalData = true
-let matchDataURL   = "http://yoururl.com/json/stations.json"
+let useLocalData = false
+let matchDataURL   = "https://raw.githubusercontent.com/uttu87/iOSLearning/master/iSeaGoals/Data/match_data.json"

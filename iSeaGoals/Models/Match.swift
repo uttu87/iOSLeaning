@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct Match {
+struct Match : Codable {
     var thumbnail: String?
     var name: String?
-    var description: String?
+    var desc: String?
+}
+
+extension Match: Equatable {
+    static func ==(lhs: Match, rhs: Match) -> Bool {
+        return (lhs.name == rhs.name) && (lhs.thumbnail == rhs.thumbnail) && (lhs.desc == rhs.desc)
+    }
 }

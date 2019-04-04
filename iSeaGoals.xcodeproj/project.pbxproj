@@ -17,6 +17,7 @@
 		361F6BFD22561482009A4109 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BFC22561482009A4109 /* Match.swift */; };
 		361F6C00225615BD009A4109 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6BFF225615BD009A4109 /* DataManager.swift */; };
 		361F6C0222561625009A4109 /* iSeaGoals-Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361F6C0122561625009A4109 /* iSeaGoals-Settings.swift */; };
+		72A4A9A0225643280025E424 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4A99F225643280025E424 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		361F6BFF225615BD009A4109 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		361F6C0122561625009A4109 /* iSeaGoals-Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iSeaGoals-Settings.swift"; sourceTree = "<group>"; };
 		361F6C0422561691009A4109 /* match_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = match_data.json; sourceTree = "<group>"; };
+		72A4A99F225643280025E424 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		361F6BC82255BF09009A4109 /* iSeaGoals */ = {
 			isa = PBXGroup;
 			children = (
+				72A4A99E225642FB0025E424 /* Extensions */,
 				361F6C0322561649009A4109 /* Data */,
 				361F6BFE2256159D009A4109 /* Networking */,
 				361F6BFB22561473009A4109 /* Models */,
@@ -158,6 +161,14 @@
 				361F6C0422561691009A4109 /* match_data.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		72A4A99E225642FB0025E424 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72A4A99F225643280025E424 /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361F6BCA2255BF09009A4109 /* AppDelegate.swift in Sources */,
+				72A4A9A0225643280025E424 /* UIImageView+Extensions.swift in Sources */,
 				361F6C0222561625009A4109 /* iSeaGoals-Settings.swift in Sources */,
 				361F6C00225615BD009A4109 /* DataManager.swift in Sources */,
 				361F6BFA22560DB2009A4109 /* MatchCollectionCell.swift in Sources */,

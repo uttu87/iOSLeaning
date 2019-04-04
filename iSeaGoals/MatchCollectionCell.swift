@@ -34,13 +34,13 @@ class MatchCollectionCell: UICollectionViewCell {
         //Add name
         name.translatesAutoresizingMaskIntoConstraints = false
         name.text = "Match name"
-        name.font = UIFont.boldSystemFont(ofSize: 15)
+        name.font = UIFont.boldSystemFont(ofSize: 13)
         matchView.addArrangedSubview(name)
         
         //Add description
         desc.translatesAutoresizingMaskIntoConstraints = false
         desc.text = "Match description"
-        desc.font = UIFont.systemFont(ofSize: 15)
+        desc.font = UIFont.systemFont(ofSize: 13)
         matchView.addArrangedSubview(desc)
         
         //StackView settings
@@ -48,5 +48,13 @@ class MatchCollectionCell: UICollectionViewCell {
         matchView.alignment = .leading
         matchView.distribution = .equalSpacing
         matchView.spacing = 10
+    }
+    
+    var match: Match! {
+        didSet {
+            thumbnail.getImageFromURL(urlString: match.thumbnail!)
+            name.text = match.name ?? ""
+            desc.text = match.desc ?? ""
+        }
     }
 }
