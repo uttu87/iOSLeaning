@@ -24,6 +24,10 @@ UICollectionViewDelegateFlowLayout{
         }
     }
     
+    var refreshControl: UIRefreshControl = {
+        return UIRefreshControl()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
@@ -50,6 +54,8 @@ UICollectionViewDelegateFlowLayout{
         
         // Load Data
         fetchData()
+        
+        setupPullToRefresh()
     }
     
     //UICollectionViewDataSource
@@ -100,6 +106,25 @@ UICollectionViewDelegateFlowLayout{
             }
             
             self.matches = matchesArray
+        }
+    }
+    
+    func setupPullToRefresh() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [.foregroundColor: UIColor.black])
+        refreshControl.backgroundColor = .white
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        collectionView?.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(sender: AnyObject) {
+        // Pull to Refresh
+        fetchData()
+        
+        // Wait 2 seconds then refresh screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.refreshControl.endRefreshing()
+            self.view.setNeedsDisplay()
         }
     }
 }

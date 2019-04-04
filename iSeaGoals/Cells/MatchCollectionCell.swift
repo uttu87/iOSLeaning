@@ -30,6 +30,7 @@ class MatchCollectionCell: UICollectionViewCell {
         thumbnail.translatesAutoresizingMaskIntoConstraints = false
         thumbnail.heightAnchor.constraint(equalTo: matchView.heightAnchor, multiplier: 2.0/3.0).isActive = true
         thumbnail.image = UIImage(named: "match")
+        thumbnail.applyShadow()
         
         //Add name
         name.translatesAutoresizingMaskIntoConstraints = false
