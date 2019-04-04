@@ -106,13 +106,13 @@
 		361F6BC82255BF09009A4109 /* iSeaGoals */ = {
 			isa = PBXGroup;
 			children = (
+				72A4A9A32256534C0025E424 /* Cells */,
+				72A4A9A2225653300025E424 /* ViewControllers */,
 				72A4A99E225642FB0025E424 /* Extensions */,
 				361F6C0322561649009A4109 /* Data */,
 				361F6BFE2256159D009A4109 /* Networking */,
 				361F6BFB22561473009A4109 /* Models */,
 				361F6BC92255BF09009A4109 /* AppDelegate.swift */,
-				361F6BF72255FF45009A4109 /* MainViewController.swift */,
-				361F6BF922560DB2009A4109 /* MatchCollectionCell.swift */,
 				361F6BD02255BF0B009A4109 /* Assets.xcassets */,
 				361F6BD22255BF0B009A4109 /* LaunchScreen.storyboard */,
 				361F6BD52255BF0B009A4109 /* Info.plist */,
@@ -169,6 +169,22 @@
 				72A4A99F225643280025E424 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72A4A9A2225653300025E424 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				361F6BF72255FF45009A4109 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72A4A9A32256534C0025E424 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				361F6BF922560DB2009A4109 /* MatchCollectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
