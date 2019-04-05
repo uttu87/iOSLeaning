@@ -13,11 +13,11 @@ UICollectionViewDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout{
 
-    var collectionView: UICollectionView?
+    private var collectionView: UICollectionView?
     let matchCellId = "MatchCell"
     let cellSpacing: CGFloat = 10
 
-    var matches = [Match]() {
+    private var matches = [Match]() {
         didSet {
             guard matches != oldValue else { return }
             matchesDidUpdate()
@@ -91,11 +91,15 @@ UICollectionViewDelegateFlowLayout{
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         // Get the Matches
-        DataManager.getStationDataWithSuccess() { (data) in
+        DataManager.getDataWithSuccess() { (data, error) in
             
             // Turn off network indicator in status bar
             defer {
-                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.refreshControl.endRefreshing()
+                    self.view.setNeedsDisplay()
+                }
             }
             
             if kDebugLog { print("Matches JSON Found") }
@@ -120,11 +124,5 @@ UICollectionViewDelegateFlowLayout{
     @objc func refresh(sender: AnyObject) {
         // Pull to Refresh
         fetchData()
-        
-        // Wait 2 seconds then refresh screen
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.refreshControl.endRefreshing()
-            self.view.setNeedsDisplay()
-        }
     }
 }

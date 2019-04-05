@@ -14,22 +14,22 @@ struct DataManager {
     // Helper struct to get either local or remote JSON
     //*****************************************************************
     
-    static func getStationDataWithSuccess(success: @escaping ((_ metaData: Data?) -> Void)) {
+    static func getDataWithSuccess(success: @escaping ((_ metaData: Data?, _ error: Error?) -> Void)) {
         
         DispatchQueue.global(qos: .userInitiated).async {
             if useLocalData {
                 getDataFromFileWithSuccess() { data in
-                    success(data)
+                    success(data, nil)
                 }
             } else {
                 guard let matchDataURL = URL(string: matchDataURL) else {
                     if kDebugLog { print("matchDataURL not a valid URL") }
-                    success(nil)
+                    success(nil, nil)
                     return
                 }
                 
                 loadDataFromURL(url: matchDataURL) { data, error in
-                    success(data)
+                    success(data, error)
                 }
             }
         }
